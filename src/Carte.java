@@ -18,18 +18,6 @@ public class Carte {
 
     }
 
-    void searchPhrase(String phrase) {
-
-        for (Pagina p : pages) {
-            int index = p.continut.indexOf(phrase);
-            if (index != -1) {
-                //String foundPhrase = p.continut.substring(index, index + phrase.length());
-                //System.out.println(foundPhrase);
-                afiseazaTitluPagina(p.pagina);
-            }
-        }
-
-    }
 
     public String getAutor() {
         return autor;
@@ -41,7 +29,6 @@ public class Carte {
 
     public void afiseazaAutorTitlu() {
         System.out.println("Autor:" + autor + "     Titlu:" + titlu);
-
     }
 
     public void afiseazaTitluPagina(int pag) {
@@ -49,7 +36,7 @@ public class Carte {
     }
 
     public void afiseazaContinutPagina(int pag) {
-        System.out.println("Carte:" + titlu + " Pagina" + pag);
+        System.out.println("Carte:" + titlu + " Pagina " + pag + " ↓");
         Pagina p = pages.get(pag - 1);
         System.out.println(p.continut);
     }

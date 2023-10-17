@@ -1,6 +1,7 @@
 public class Pagina {
     int pagina;
     String continut;
+
     public Pagina(int i, String continut) {
 
         this.pagina = i;
